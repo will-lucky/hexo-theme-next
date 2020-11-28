@@ -302,12 +302,12 @@ $note-border : (
 );
 
 $note-bg : (
-  'default' : lighten(spin(map.get($note-border, 'default'), 0), 94% + $lbg),
-  'primary' : lighten(spin(map.get($note-border, 'primary'), 10), 92% + $lbg),
-  'info'    : lighten(spin(map.get($note-border, 'info'), -10), 91% + $lbg),
-  'success' : lighten(spin(map.get($note-border, 'success'), 10), 90% + $lbg),
-  'warning' : lighten(spin(map.get($note-border, 'warning'), 10), 88% + $lbg),
-  'danger'  : lighten(spin(map.get($note-border, 'danger'), -10), 92% + $lbg)
+  'default' : lighten(adjust-hue(map.get($note-border, 'default'), 0), 94% + $lbg),
+  'primary' : lighten(adjust-hue(map.get($note-border, 'primary'), 10), 92% + $lbg),
+  'info'    : lighten(adjust-hue(map.get($note-border, 'info'), -10), 91% + $lbg),
+  'success' : lighten(adjust-hue(map.get($note-border, 'success'), 10), 90% + $lbg),
+  'warning' : lighten(adjust-hue(map.get($note-border, 'warning'), 10), 88% + $lbg),
+  'danger'  : lighten(adjust-hue(map.get($note-border, 'danger'), -10), 92% + $lbg)
 );
 
 $note-text : (
@@ -338,12 +338,12 @@ $note-modern-border : (
 );
 
 $note-modern-bg : (
-  'default' : lighten(spin(map.get($note-modern-border, 'default'), 10), 60% + ($lbg * 4)),
-  'primary' : lighten(spin(map.get($note-modern-border, 'primary'), 10), 40% + ($lbg * 4)),
-  'info'    : lighten(spin(map.get($note-modern-border, 'info'), 10), 50% + ($lbg * 4)),
-  'success' : lighten(spin(map.get($note-modern-border, 'success'), 10), 40% + ($lbg * 4)),
-  'warning' : lighten(spin(map.get($note-modern-border, 'warning'), 10), 43% + ($lbg * 4)),
-  'danger'  : lighten(spin(map.get($note-modern-border, 'danger'), 10), 35% + ($lbg * 4))
+  'default' : lighten(adjust-hue(map.get($note-modern-border, 'default'), 10), 60% + ($lbg * 4)),
+  'primary' : lighten(adjust-hue(map.get($note-modern-border, 'primary'), 10), 40% + ($lbg * 4)),
+  'info'    : lighten(adjust-hue(map.get($note-modern-border, 'info'), 10), 50% + ($lbg * 4)),
+  'success' : lighten(adjust-hue(map.get($note-modern-border, 'success'), 10), 40% + ($lbg * 4)),
+  'warning' : lighten(adjust-hue(map.get($note-modern-border, 'warning'), 10), 43% + ($lbg * 4)),
+  'danger'  : lighten(adjust-hue(map.get($note-modern-border, 'danger'), 10), 35% + ($lbg * 4))
 );
 
 $note-modern-text : (
@@ -356,12 +356,12 @@ $note-modern-text : (
 );
 
 $note-modern-hover : (
-  'default' : darken(spin(map.get($note-modern-text, 'default'), -10), 32%),
-  'primary' : darken(spin(map.get($note-modern-text, 'primary'), -10), 22%),
-  'info'    : darken(spin(map.get($note-modern-text, 'info'), -10), 32%),
-  'success' : darken(spin(map.get($note-modern-text, 'success'), -10), 27%),
-  'warning' : darken(spin(map.get($note-modern-text, 'warning'), -10), 18%),
-  'danger'  : darken(spin(map.get($note-modern-text, 'danger'), -10), 22%)
+  'default' : darken(adjust-hue(map.get($note-modern-text, 'default'), -10), 32%),
+  'primary' : darken(adjust-hue(map.get($note-modern-text, 'primary'), -10), 22%),
+  'info'    : darken(adjust-hue(map.get($note-modern-text, 'info'), -10), 32%),
+  'success' : darken(adjust-hue(map.get($note-modern-text, 'success'), -10), 27%),
+  'warning' : darken(adjust-hue(map.get($note-modern-text, 'warning'), -10), 18%),
+  'danger'  : darken(adjust-hue(map.get($note-modern-text, 'danger'), -10), 22%)
 );
 
 
@@ -373,10 +373,10 @@ $tbr                        : 0;
 // Label colors
 // --------------------------------------------------
 $label : (
-  'default' : lighten(spin(map.get($note-border, 'default'), 0), 89% + $lbg),
-  'primary' : lighten(spin(map.get($note-border, 'primary'), 10), 87% + $lbg),
-  'info'    : lighten(spin(map.get($note-border, 'info'), -10), 86% + $lbg),
-  'success' : lighten(spin(map.get($note-border, 'success'), 10), 85% + $lbg),
-  'warning' : lighten(spin(map.get($note-border, 'warning'), 10), 83% + $lbg),
-  'danger'  : lighten(spin(map.get($note-border, 'danger'), -10), 87% + $lbg)
+  'default' : lighten(adjust-hue(map.get($note-border, 'default'), 0), 89% + $lbg),
+  'primary' : lighten(adjust-hue(map.get($note-border, 'primary'), 10), 87% + $lbg),
+  'info'    : lighten(adjust-hue(map.get($note-border, 'info'), -10), 86% + $lbg),
+  'success' : lighten(adjust-hue(map.get($note-border, 'success'), 10), 85% + $lbg),
+  'warning' : lighten(adjust-hue(map.get($note-border, 'warning'), 10), 83% + $lbg),
+  'danger'  : lighten(adjust-hue(map.get($note-border, 'danger'), -10), 87% + $lbg)
 );
