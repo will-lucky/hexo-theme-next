@@ -62,7 +62,7 @@ if (hexo-config('note.style') != 'disabled') {
       }
     }
 
-    for $type in $note-types {
+    @each $type in $note-types {
       &.{$type} {
         if ($note-style == 'flat') {
           background: $note-bg[$type];

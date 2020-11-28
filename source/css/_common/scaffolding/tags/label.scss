@@ -2,7 +2,7 @@
   color: $text-color;
   padding: 0 2px;
 
-  for $type in $note-types {
+  @each $type in $note-types {
     &.{$type} {
       background: $label[$type];
     }

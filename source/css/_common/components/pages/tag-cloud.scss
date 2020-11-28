@@ -7,7 +7,7 @@
   }
 }
 
-for $tag-cloud in (0 .. 10) {
+@for $tag-cloud from 0 through 10 {
   $tag-cloud-color : mix($tag-cloud-end, $tag-cloud-start, $tag-cloud * 10);
   .tag-cloud-{$tag-cloud} {
     border-bottom-color: $tag-cloud-color;
@@ -17,7 +17,7 @@ for $tag-cloud in (0 .. 10) {
 
 if (hexo-config('darkmode')) {
   @media (prefers-color-scheme: dark) {
-    for $tag-cloud in (0 .. 10) {
+    @for $tag-cloud from 0 through 10 {
       $tag-cloud-color : mix($tag-cloud-end-dark, $tag-cloud-start-dark, $tag-cloud * 10);
       .tag-cloud-{$tag-cloud} {
         border-bottom-color: $tag-cloud-color;
