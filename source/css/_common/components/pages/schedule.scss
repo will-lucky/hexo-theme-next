@@ -26,8 +26,8 @@
   }
 
   .event {
-    --event-background: $black-deep;
-    --event-foreground: $grey;
+    --event-background: #{$black-deep};
+    --event-foreground: #{$grey};
     --event-title: white;
     background: var(--event-background);
     padding: 15px;
@@ -95,8 +95,8 @@
   }
 
   .event-past {
-    --event-background: $whitesmoke;
-    --event-foreground: $grey-dark;
-    --event-title: $black-deep;
+    --event-background: #{$whitesmoke};
+    --event-foreground: #{$grey-dark};
+    --event-title: #{$black-deep};
   }
 }
