@@ -68,7 +68,7 @@
     }
 
     &::before {
-      background: rgb(random-color(0, 255) - 50%, random-color(0, 255) - 50%, random-color(0, 255) - 50%);
+      background: rgb(random(255), random(255), random(255));
       display: inline-block;
       margin-right: 3px;
       transform: translateY(-2px);
