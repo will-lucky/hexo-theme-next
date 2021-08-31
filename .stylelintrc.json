@@ -1,0 +1,11 @@
+{
+  "extends": "stylelint-config-sass-guidelines",
+  "rules": {
+    "color-named": "always-where-possible",
+    "max-nesting-depth": 5,
+    "number-leading-zero": "never",
+    "selector-list-comma-newline-after": "never-multi-line",
+    "selector-max-compound-selectors": 5,
+    "scss/dollar-variable-colon-space-before": null
+  }
+}

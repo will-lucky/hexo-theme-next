@@ -15,7 +15,7 @@
   "scripts": {
     "eslint": "eslint scripts/ source/js test/",
     "prepare": "node .githooks/install.js",
-    "stylint": "stylint source/css/",
+    "stylelint": "stylelint source/css/ --ip normalize.scss",
     "test": "mocha test/index.js",
     "test-cov": "nyc npm test"
   },
@@ -40,6 +40,7 @@
     "js-yaml": "4.1.0",
     "mocha": "9.2.2",
     "nyc": "15.1.0",
-    "stylint": "2.0.0"
+    "stylelint": "13.13.1",
+    "stylelint-config-sass-guidelines": "8.0.0"
   }
 }
