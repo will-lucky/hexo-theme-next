@@ -1,18 +1,14 @@
-// Use `@require` to fix issue #67
-@require hexo-config('highlight.light.file') if (hexo-config('highlight.enable') && hexo-config('highlight.light.file'));
-if (hexo-config('prism.enable')) {
-  @require hexo-config('prism.light') if (hexo-config('prism.light'));
-  @require hexo-config('prism.number') if (hexo-config('prism.number'));
+// Use `@use` to fix issue #67
+@import '(theme.highlight.enable && theme.highlight.light.file) ? theme.highlight.light.file : null';
+@import '(theme.prism.enable && theme.prism.light) ? theme.prism.light : null';
+@import '(theme.prism.enable && theme.prism.number) ? theme.prism.number : null';
+
+@media (prefers-color-scheme: dark) {
+  @import '(theme.darkmode && theme.highlight.enable && theme.highlight.dark.file) ? theme.highlight.dark.file : null';
+  @import '(theme.darkmode && theme.prism.enable && theme.prism.dark) ? theme.prism.dark : null';
 }
 
-if (hexo-config('darkmode')) {
-  @media (prefers-color-scheme: dark) {
-    @require hexo-config('highlight.dark.file') if (hexo-config('highlight.enable') && hexo-config('highlight.dark.file'));
-    @require hexo-config('prism.dark') if (hexo-config('prism.enable') && hexo-config('prism.dark'));
-  }
-}
-
-@require 'copy-code' if (hexo-config('codeblock.copy_button.enable'));
+@import 'theme.codeblock.copy_button.enable ? "copy-code" : null';
 
 // Placeholder: $code-inline $code-block
 $code-inline {
