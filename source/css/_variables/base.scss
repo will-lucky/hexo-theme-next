@@ -143,13 +143,13 @@ $table-row-hover-bg-color-dark  : #363636;
 // --------------------------------------------------
 $code-font-family               : $font-family-monospace;
 
-$highlight-background        : convert(hexo-config('highlight.light.background'));
-$highlight-foreground        : convert(hexo-config('highlight.light.foreground'));
+$highlight-background        : hexo-config('highlight.light.background');
+$highlight-foreground        : hexo-config('highlight.light.foreground');
 $highlight-gutter-background : mix($highlight-background, $highlight-foreground, 90%);
 $highlight-gutter-foreground : mix($highlight-background, $highlight-foreground, 10%);
 
-$highlight-background-dark        : convert(hexo-config('highlight.dark.background'));
-$highlight-foreground-dark        : convert(hexo-config('highlight.dark.foreground'));
+$highlight-background-dark        : hexo-config('highlight.dark.background');
+$highlight-foreground-dark        : hexo-config('highlight.dark.foreground');
 $highlight-gutter-background-dark : mix($highlight-background-dark, $highlight-foreground-dark, 90%);
 $highlight-gutter-foreground-dark : mix($highlight-background-dark, $highlight-foreground-dark, 10%);
 
