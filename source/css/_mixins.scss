@@ -99,7 +99,7 @@ post-card() {
   margin: $post-card-margin;
 }
 
-font-family-icons($icon = '') {
+font-family-icons($icon : '') {
   if ($icon) {
     content: $icon;
   }
@@ -121,9 +121,9 @@ main-container() {
 }
 
 sidebar-toggle-alignment($reverse) {
-  $condition = hexo-config('sidebar.position') == 'right';
+  $condition : hexo-config('sidebar.position') == 'right';
   if (($scheme == 'Muse') or ($scheme == 'Mist')) {
-    $condition = $condition == $reverse;
+    $condition : $condition == $reverse;
   }
   return $condition ? ('left' 'right') : ('right' 'left');
 }
