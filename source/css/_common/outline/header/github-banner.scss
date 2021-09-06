@@ -1,4 +1,4 @@
-if (hexo-config('github_banner.enable')) {
+@if hexo-config('github_banner.enable') {
   @keyframes octocat-wave {
     0%, 100% {
       transform: rotate(0);
@@ -28,12 +28,12 @@ if (hexo-config('github_banner.enable')) {
     }
 
     +tablet-mobile() {
-      if (hexo-config('local_search.enable') or hexo-config('algolia_search.enable')) {
+      @if hexo-config('local_search.enable') or hexo-config('algolia_search.enable') {
         display: none;
       }
 
       svg {
-        if (($scheme == 'Pisces') or ($scheme == 'Gemini')) {
+        @if ($scheme == 'Pisces') or ($scheme == 'Gemini') {
           color: var(--theme-color);
           fill: white;
         }
@@ -48,8 +48,8 @@ if (hexo-config('github_banner.enable')) {
       }
     }
 
-    if ($scheme == 'Mist') {
-      +mobile() {
+    @if $scheme == 'Mist' {
+      @include mobile() {
         svg {
           top: inherit;
         }

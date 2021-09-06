@@ -100,7 +100,7 @@
 }
 
 @mixin font-family-icons($icon : '') {
-  if ($icon) {
+  @if $icon {
     content: $icon;
   }
   font-family: 'Font Awesome 5 Free';
@@ -122,14 +122,14 @@
 
 @function sidebar-toggle-alignment($reverse) {
   $condition : hexo-config('sidebar.position') == 'right';
-  if (($scheme == 'Muse') or ($scheme == 'Mist')) {
+  @if ($scheme == 'Muse') or ($scheme == 'Mist') {
     $condition : $condition == $reverse;
   }
-  return $condition ? ('left' 'right') : ('right' 'left');
+  @return if($condition, ('left' 'right'), ('right' 'left'));
 }
 
 @mixin sidebar-toggle-position($reverse) {
-  $alignment = sidebar-toggle-alignment($reverse)[0];
+  $alignment : sidebar-toggle-alignment($reverse)[0];
   {$alignment}: $b2t-position-right;
   +tablet-mobile() {
     {$alignment}: $b2t-position-right-mobile;
@@ -161,7 +161,7 @@
 }
 
 @mixin toggle-arrow($position) {
-  if ($position == 'right') {
+  @if $position == 'right' {
     .toggle-line:first-child {
       top: 2px;
       transform: rotate(-45deg);
@@ -173,7 +173,7 @@
       transform: rotate(45deg);
       width: 50%;
     }
-  } else {
+  } @else {
     .toggle-line:first-child {
       left: 50%;
       top: 2px;
@@ -195,7 +195,7 @@
     opacity: 0;
   }
 
-  if ($position == 'right') {
+  @if $position == 'right' {
     .toggle-line:first-child {
       top: 5px;
       transform: rotate(-45deg);
@@ -205,7 +205,7 @@
       top: -5px;
       transform: rotate(45deg);
     }
-  } else {
+  } @else {
     .toggle-line:first-child {
       top: 5px;
       transform: rotate(45deg);

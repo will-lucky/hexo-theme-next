@@ -1,4 +1,4 @@
-if (hexo-config('local_search.enable') or hexo-config('algolia_search.enable')) {
+@if hexo-config('local_search.enable') or hexo-config('algolia_search.enable') {
   .search-active {
     overflow: hidden;
   }
@@ -108,7 +108,7 @@ if (hexo-config('local_search.enable') or hexo-config('algolia_search.enable')) 
   }
 }
 
-if (hexo-config('algolia_search.enable')) {
+@if hexo-config('algolia_search.enable') {
   .search-input-container {
     flex-grow: 1;
 
@@ -149,7 +149,7 @@ if (hexo-config('algolia_search.enable')) {
   }
 }
 
-if (hexo-config('local_search.enable')) {
+@if hexo-config('local_search.enable') {
   .search-popup {
     .search-input-container {
       flex-grow: 1;

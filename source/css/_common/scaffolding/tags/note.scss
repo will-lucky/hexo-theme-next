@@ -1,4 +1,4 @@
-if (hexo-config('note.style') != 'disabled') {
+@if hexo-config('note.style') != 'disabled' {
   .post-body .note {
     $note-icons : hexo-config('note.icons');
     $note-style : hexo-config('note.style');
@@ -8,17 +8,17 @@ if (hexo-config('note.style') != 'disabled') {
     padding: 1em;
     position: relative;
 
-    if ($note-style == 'simple') {
+    @if $note-style == 'simple' {
       border: 1px solid $gainsboro;
       border-left-width: 5px;
     }
 
-    if ($note-style == 'modern') {
+    @if $note-style == 'modern' {
       background: $whitesmoke;
       border: 1px solid transparent;
     }
 
-    if ($note-style == 'flat') {
+    @if $note-style == 'flat' {
       background: lighten($gainsboro, 65%);
       border: initial;
       border-left: 3px solid $gainsboro;
@@ -49,7 +49,7 @@ if (hexo-config('note.style') != 'disabled') {
       }
     }
 
-    if ($note-icons) {
+    @if $note-icons {
       &:not(.no-icon) {
         padding-left: 2.5em;
 
@@ -64,16 +64,16 @@ if (hexo-config('note.style') != 'disabled') {
 
     @each $type in $note-types {
       &.{$type} {
-        if ($note-style == 'flat') {
+        @if $note-style == 'flat' {
           background: $note-bg[$type];
-          if (hexo-config('darkmode')) {
+          @if hexo-config('darkmode') {
             @media (prefers-color-scheme: dark) {
               background: mix($note-bg[$type], $body-bg-color-dark, 10%);
             }
           }
         }
 
-        if ($note-style == 'modern') {
+        @if $note-style == 'modern' {
           background: $note-modern-bg[$type];
           border-color: $note-modern-border[$type];
           color: $note-modern-text[$type];
@@ -89,7 +89,7 @@ if (hexo-config('note.style') != 'disabled') {
           }
         }
 
-        if ($note-style != 'modern') {
+        @if $note-style != 'modern' {
           border-left-color: $note-border[$type];
 
           h2, h3, h4, h5, h6 {
@@ -97,11 +97,11 @@ if (hexo-config('note.style') != 'disabled') {
           }
         }
 
-        if ($note-icons) {
+        @if $note-icons {
           &:not(.no-icon)::before {
             font-family-icons($note-icon[$type]);
 
-            if ($note-style != 'modern') {
+            @if $note-style != 'modern' {
               color: $note-text[$type];
             }
           }

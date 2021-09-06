@@ -18,7 +18,7 @@
   }
 }
 
-if (hexo-config('creative_commons.post')) {
+@if hexo-config('creative_commons.post') {
   .post-copyright ul {
     list-style: none;
     padding: .5em 1em;

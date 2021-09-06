@@ -10,7 +10,7 @@
     display: none;
   }
 
-  if (hexo-config('motion.enable') and hexo-config('motion.transition.sidebar')) {
+  @if hexo-config('motion.enable') and hexo-config('motion.transition.sidebar') {
     visibility: hidden;
   }
 }
@@ -56,7 +56,7 @@
 .links-of-author-item {
   sidebar-inline-links-item();
 
-  if (not hexo-config('social_icons.icons_only')) {
+  @if not hexo-config('social_icons.icons_only') {
     width: 50%;
   }
 
@@ -72,14 +72,14 @@
 }
 
 .links-of-blogroll-item {
-  if (hexo-config('links_settings.layout') == 'inline') {
+  @if hexo-config('links_settings.layout') == 'inline' {
     display: inline-block;
     max-width: 100%;
     sidebar-inline-links-item();
   }
 }
 
-if (hexo-config('back2top.sidebar')) {
+@if hexo-config('back2top.sidebar') {
   // Only when back2top.sidebar is true, apply the following styles
   .back-to-top {
     background: var(--body-bg-color);

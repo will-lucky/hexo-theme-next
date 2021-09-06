@@ -1,4 +1,4 @@
-if (hexo-config('bookmark.enable')) {
+@if hexo-config('bookmark.enable') {
   .book-mark-link {
     border-bottom: 0;
     position: fixed;

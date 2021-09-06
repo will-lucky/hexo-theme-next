@@ -1,4 +1,4 @@
-if (hexo-config('site_state')) {
+@if hexo-config('site_state') {
   .site-state {
     flex-wrap();
     line-height: 1.4;

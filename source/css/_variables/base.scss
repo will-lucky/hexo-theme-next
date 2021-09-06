@@ -81,19 +81,29 @@ $theme-color-dark             = convert(hexo-config('theme_color.dark'));
 $font-family-chinese      : 'PingFang SC', 'Microsoft YaHei';
 
 $font-family-base         : $font-family-chinese, sans-serif;
-$font-family-base         : get_font_family('global'), $font-family-chinese, sans-serif if get_font_family('global');
+@if get_font_family('global') {
+  $font-family-base       : join(get_font_family('global'), $font-family-base);
+}
 
 $font-family-logo         : $font-family-base;
-$font-family-logo         : get_font_family('title'), $font-family-base if get_font_family('title');
+@if get_font_family('title') {
+  $font-family-logo       : join(get_font_family('title'), $font-family-logo);
+}
 
 $font-family-headings     : $font-family-base;
-$font-family-headings     : get_font_family('headings'), $font-family-base if get_font_family('headings');
+@if get_font_family('headings') {
+  $font-family-headings   : join(get_font_family('headings'), $font-family-headings);
+}
 
 $font-family-posts        : $font-family-base;
-$font-family-posts        : get_font_family('posts'), $font-family-base if get_font_family('posts');
+@if get_font_family('posts') {
+  $font-family-posts      : join(get_font_family('posts'), $font-family-posts);
+}
 
 $font-family-monospace    : consolas, Menlo, monospace, $font-family-chinese;
-$font-family-monospace    : get_font_family('codes'), consolas, Menlo, monospace, $font-family-chinese if get_font_family('codes');
+@if get_font_family('codes') {
+  $font-family-monospace  : join(get_font_family('codes'), $font-family-monospace);
+}
 
 
 // Font size

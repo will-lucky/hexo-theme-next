@@ -18,7 +18,7 @@ body {
   position: relative;
   transition: padding $transition-ease;
 
-  if (hexo-config('body_scrollbar.overlay')) {
+  @if hexo-config('body_scrollbar.overlay') {
     overflow-x: hidden;
     @supports (overflow-x: clip) {
       overflow-x: clip;
@@ -26,7 +26,7 @@ body {
     width: 100vw;
   }
 
-  if (hexo-config('body_scrollbar.stable')) {
+  @if hexo-config('body_scrollbar.stable') {
     overflow-y: scroll;
   }
 }

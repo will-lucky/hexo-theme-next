@@ -1,4 +1,4 @@
-if (hexo-config('reading_progress.enable')) {
+@if hexo-config('reading_progress.enable') {
   .reading-progress-bar {
     --progress: 0;
     background: convert(hexo-config('reading_progress.color'));
@@ -6,21 +6,21 @@ if (hexo-config('reading_progress.enable')) {
     position: fixed;
     z-index: $zindex-5;
 
-    if (hexo-config('reading_progress.reversed')) {
+    @if hexo-config('reading_progress.reversed') {
       width: calc(100% - var(--progress));
-    } else {
+    } @else {
       width: var(--progress);
     }
 
-    if (hexo-config('reading_progress.start_at') == 'right') {
+    @if hexo-config('reading_progress.start_at') == 'right' {
       right: 0;
-    } else {
+    } @else {
       left: 0;
     }
 
-    if (hexo-config('reading_progress.position') == 'bottom') {
+    @if hexo-config('reading_progress.position') == 'bottom' {
       bottom: 0;
-    } else {
+    } @else {
       top: 0;
     }
   }

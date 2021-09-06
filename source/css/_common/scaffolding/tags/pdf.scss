@@ -1,4 +1,4 @@
-if (hexo-config('pdf.enable')) {
+@if hexo-config('pdf.enable') {
   .pdfobject-container {
     iframe, embed {
       height: convert(hexo-config('pdf.height'));
