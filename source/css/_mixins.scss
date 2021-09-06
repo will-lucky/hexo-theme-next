@@ -1,73 +1,73 @@
-mobile-smallest() {
+@mixin mobile-smallest() {
   @media (max-width: 413px) {
-    {block};
+    @content;;
   }
 }
 
-mobile-small() {
+@mixin mobile-small() {
   @media (max-width: 567px) {
-    {block};
+    @content;
   }
 }
 
-mobile() {
+@mixin mobile() {
   @media (max-width: 767px) {
-    {block};
+    @content;
   }
 }
 
-tablet-mobile() {
+@mixin tablet-mobile() {
   @media (max-width: 991px) {
-    {block};
+    @content;
   }
 }
 
-tablet-desktop() {
+@mixin tablet-desktop() {
   @media (min-width: 768px) {
-    {block};
+    @content;
   }
 }
 
-tablet() {
+@mixin tablet() {
   @media (min-width: 768px) and (max-width: 991px) {
-    {block};
+    @content;
   }
 }
 
-desktop() {
+@mixin desktop() {
   @media (min-width: 992px) {
-    {block};
+    @content;
   }
 }
 
-desktop-large() {
+@mixin desktop-large() {
   @media (min-width: 1200px) {
-    {block};
+    @content;
   }
 }
 
-desktop-largest() {
+@mixin desktop-largest() {
   @media (min-width: 1600px) {
-    {block};
+    @content;
   }
 }
 
-random-color($min, $max) {
+@mixin random-color($min, $max) {
   return floor(math(0, 'random') * ($max - $min + 1) + $min);
 }
 
-word-wrap() {
+@mixin word-wrap() {
   overflow-wrap: break-word;
 }
 
-disable-user-select() {
+@mixin disable-user-select() {
   -moz-user-select: none;
   -ms-user-select: none;
   -webkit-user-select: none;
   user-select: none;
 }
 
-sidebar-inline-links-item() {
+@mixin sidebar-inline-links-item() {
   margin: 5px 0 0;
 
   a {
@@ -81,25 +81,25 @@ sidebar-inline-links-item() {
   }
 }
 
-flex-wrap() {
+@mixin flex-wrap() {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
 
-flex-column() {
+@mixin flex-column() {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
-post-card() {
+@mixin post-card() {
   background: var(--card-bg-color);
   border-left: 3px solid $red;
   margin: $post-card-margin;
 }
 
-font-family-icons($icon : '') {
+@mixin font-family-icons($icon : '') {
   if ($icon) {
     content: $icon;
   }
@@ -107,7 +107,7 @@ font-family-icons($icon : '') {
   font-weight: 900;
 }
 
-main-container() {
+@mixin main-container() {
   margin: 0 auto;
   width: $content-desktop;
 
@@ -120,7 +120,7 @@ main-container() {
   }
 }
 
-sidebar-toggle-alignment($reverse) {
+@function sidebar-toggle-alignment($reverse) {
   $condition : hexo-config('sidebar.position') == 'right';
   if (($scheme == 'Muse') or ($scheme == 'Mist')) {
     $condition : $condition == $reverse;
@@ -128,7 +128,7 @@ sidebar-toggle-alignment($reverse) {
   return $condition ? ('left' 'right') : ('right' 'left');
 }
 
-sidebar-toggle-position($reverse) {
+@mixin sidebar-toggle-position($reverse) {
   $alignment = sidebar-toggle-alignment($reverse)[0];
   {$alignment}: $b2t-position-right;
   +tablet-mobile() {
@@ -136,7 +136,7 @@ sidebar-toggle-position($reverse) {
   }
 }
 
-sidebar-toggle() {
+@mixin sidebar-toggle() {
   background: $b2t-bg-color;
   cursor: pointer;
   opacity: $b2t-opacity;
@@ -153,14 +153,14 @@ sidebar-toggle() {
   }
 }
 
-round-icon($diameter) {
+@mixin round-icon($diameter) {
   border-radius: 50%;
   content: ' ';
   height: $diameter;
   width: $diameter;
 }
 
-toggle-arrow($position) {
+@mixin toggle-arrow($position) {
   if ($position == 'right') {
     .toggle-line:first-child {
       top: 2px;
@@ -190,7 +190,7 @@ toggle-arrow($position) {
   }
 }
 
-toggle-close($position) {
+@mixin toggle-close($position) {
   .toggle-line:nth-child(2) {
     opacity: 0;
   }
@@ -218,7 +218,7 @@ toggle-close($position) {
   }
 }
 
-site-nav-hide-by-default() {
+@mixin site-nav-hide-by-default() {
   --scroll-height: 0;
   height: 0;
   overflow: hidden;
@@ -233,7 +233,7 @@ site-nav-hide-by-default() {
   }
 }
 
-button($color) {
+@mixin button($color) {
   background: transparent;
   color: $color;
   cursor: pointer;
