@@ -10,19 +10,19 @@
 
 @import 'theme.codeblock.copy_button.enable ? "copy-code" : null';
 
-// Placeholder: $code-inline $code-block
-$code-inline {
+// Placeholder: %code-inline %code-block
+%code-inline {
   background: var(--highlight-background);
   color: var(--highlight-foreground);
 }
 
-$code-block {
-  @extend $code-inline;
+%code-block {
+  @extend %code-inline;
   line-height: $line-height-code-block;
   margin: 0 auto 20px;
 }
 
-$figcaption {
+%figcaption {
   background: var(--highlight-gutter-background);
   color: var(--highlight-foreground);
   display: flow-root;
@@ -45,7 +45,7 @@ pre, code {
 }
 
 code {
-  @extend $code-inline;
+  @extend %code-inline;
   border-radius: 3px;
   font-size: $table-font-size;
   padding: 2px 4px;
@@ -53,7 +53,7 @@ code {
 }
 
 kbd {
-  @extend $code-inline;
+  @extend %code-inline;
   border: 2px solid $grey-light;
   border-radius: .2em;
   box-shadow: .1em .1em .2em rgba(0, 0, 0, .1);
@@ -65,7 +65,7 @@ kbd {
 // `highlight.line_number: false` and `highlight.wrap: false`
 // in Hexo config generates code.highlight elements
 figure.highlight {
-  @extend $code-block;
+  @extend %code-block;
   position: relative;
 
   pre {
@@ -86,7 +86,7 @@ figure.highlight {
   }
 
   figcaption {
-    @extend $figcaption;
+    @extend %figcaption;
   }
 
   .gutter {
@@ -114,7 +114,7 @@ figure.highlight {
 
 // See https://github.com/hexojs/hexo-util/pull/229
 pre .caption, pre figcaption {
-  @extend $figcaption;
+  @extend %figcaption;
   margin-bottom: 10px;
 }
 
@@ -127,7 +127,7 @@ pre .caption, pre figcaption {
 }
 
 pre {
-  @extend $code-block;
+  @extend %code-block;
   overflow: auto;
   padding: 10px;
   position: relative;

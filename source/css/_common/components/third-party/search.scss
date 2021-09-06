@@ -139,7 +139,7 @@
     }
 
     .current .page-number {
-      @extend $page-number-current;
+      @extend %page-number-current;
       cursor: default;
     }
 
