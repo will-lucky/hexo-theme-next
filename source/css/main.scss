@@ -1,7 +1,7 @@
 // CSS Style Guide: https://codeguide.co/#css
 
 
-$scheme : hexo-config('scheme') ? hexo-config('scheme') : 'Muse';
+$scheme : if(hexo-config('scheme'), hexo-config('scheme'), 'Muse');
 
 
 // Variables Layer

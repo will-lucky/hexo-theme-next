@@ -6,7 +6,7 @@
   padding-top: 10px;
 
   ul.nav-tabs {
-    background: (($scheme == 'Muse') or ($scheme == 'Mist')) ? var(--body-bg-color) : var(--content-bg-color);
+    background: if(($scheme == 'Muse') or ($scheme == 'Mist'), var(--body-bg-color), var(--content-bg-color));
     display: flex;
     flex-wrap: wrap;
     margin: 0;
