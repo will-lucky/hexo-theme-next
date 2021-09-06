@@ -1,3 +1,5 @@
+@use 'sass:map';
+
 @if hexo-config('note.style') != 'disabled' {
   .post-body .note {
     $note-icons : hexo-config('note.icons');
@@ -65,44 +67,44 @@
     @each $type in $note-types {
       &.#{$type} {
         @if $note-style == 'flat' {
-          background: $note-bg[$type];
+          background: map.get($note-bg, $type);
           @if hexo-config('darkmode') {
             @media (prefers-color-scheme: dark) {
-              background: mix($note-bg[$type], $body-bg-color-dark, 10%);
+              background: mix(map.get($note-bg, $type), $body-bg-color-dark, 10%);
             }
           }
         }
 
         @if $note-style == 'modern' {
-          background: $note-modern-bg[$type];
-          border-color: $note-modern-border[$type];
-          color: $note-modern-text[$type];
+          background: map.get($note-modern-bg, $type);
+          border-color: map.get($note-modern-border, $type);
+          color: map.get($note-modern-text, $type);
 
           a:not(.btn) {
-            border-bottom-color: $note-modern-text[$type];
-            color: $note-modern-text[$type];
+            border-bottom-color: map.get($note-modern-text, $type);
+            color: map.get($note-modern-text, $type);
 
             &:hover {
-              border-bottom-color: $note-modern-hover[$type];
-              color: $note-modern-hover[$type];
+              border-bottom-color: map.get($note-modern-hover, $type);
+              color: map.get($note-modern-hover, $type);
             }
           }
         }
 
         @if $note-style != 'modern' {
-          border-left-color: $note-border[$type];
+          border-left-color: map.get($note-border, $type);
 
           h2, h3, h4, h5, h6 {
-            color: $note-text[$type];
+            color: map.get($note-text, $type);
           }
         }
 
         @if $note-icons {
           &:not(.no-icon)::before {
-            @include font-family-icons($note-icon[$type]);
+            @include font-family-icons(map.get($note-icon, $type));
 
             @if $note-style != 'modern' {
-              color: $note-text[$type];
+              color: map.get($note-text, $type);
             }
           }
         }
