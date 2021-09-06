@@ -99,7 +99,7 @@
 
         @if $note-icons {
           &:not(.no-icon)::before {
-            font-family-icons($note-icon[$type]);
+            @include font-family-icons($note-icon[$type]);
 
             @if $note-style != 'modern' {
               color: $note-text[$type];

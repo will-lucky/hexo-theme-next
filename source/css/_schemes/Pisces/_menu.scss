@@ -1,6 +1,6 @@
 .site-nav {
-  +tablet() {
-    site-nav-hide-by-default();
+  @include tablet() {
+    @include site-nav-hide-by-default();
   }
 }
 
@@ -15,7 +15,7 @@
     transition-property: background-color;
   }
 
-  +tablet-mobile() {
+  @include tablet-mobile() {
     &.menu-item-search {
       display: none;
     }

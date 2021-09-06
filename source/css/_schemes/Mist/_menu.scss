@@ -3,13 +3,13 @@
 .site-nav {
   flex-grow: 1;
 
-  +mobile() {
+  @include mobile() {
     padding: 0 10px 0;
   }
 }
 
 .main-menu {
-  +mobile() {
+  @include mobile() {
     padding-top: 10px;
   }
 }
@@ -20,7 +20,7 @@
   .menu-item {
     margin: 0;
 
-    +mobile() {
+    @include mobile() {
       margin-top: 5px;
     }
 
@@ -29,7 +29,7 @@
       padding: 0 10px;
       transition-property: background;
 
-      +mobile() {
+      @include mobile() {
         text-align: left;
       }
     }

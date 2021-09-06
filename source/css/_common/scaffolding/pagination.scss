@@ -3,7 +3,7 @@ $page-number-basic {
   margin: -1px 10px 0;
   padding: 0 10px;
 
-  +mobile() {
+  @include mobile() {
     margin: 0 5px;
   }
 }
@@ -30,7 +30,7 @@ $page-number-current {
     }
   }
 
-  +mobile() {
+  @include mobile() {
     border-top: 0;
 
     .prev, .next, .page-number {

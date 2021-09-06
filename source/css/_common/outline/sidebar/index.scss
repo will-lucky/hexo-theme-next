@@ -5,7 +5,7 @@
   max-height: calc(100vh - #{$offset * 2});
   padding: $sidebar-padding 10px;
   text-align: center;
-  flex-column();
+  @include flex-column();
 }
 
 .site-overview-item:not(:first-child) {

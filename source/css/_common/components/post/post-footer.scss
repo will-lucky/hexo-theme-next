@@ -4,7 +4,7 @@
 // To do: use `gap` instead of `margin`
 // See https://caniuse.com/flexbox-gap
 .post-footer {
-  flex-column();
+  @include flex-column();
 }
 
 .post-eof {
@@ -22,7 +22,7 @@
   .post-copyright ul {
     list-style: none;
     padding: .5em 1em;
-    post-card();
+    @include post-card();
   }
 }
 

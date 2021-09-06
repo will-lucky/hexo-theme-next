@@ -34,7 +34,7 @@
       transform: scale(1);
     }
 
-    +mobile() {
+    @include mobile() {
       border-radius: 0;
       height: 100%;
       width: 100%;

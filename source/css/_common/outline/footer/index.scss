@@ -18,8 +18,8 @@
 .footer-inner {
   box-sizing: border-box;
   text-align: center;
-  flex-column();
-  main-container();
+  @include flex-column();
+  @include main-container();
 }
 
 .use-motion {

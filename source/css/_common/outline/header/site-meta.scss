@@ -2,7 +2,7 @@
   flex-grow: 1;
   text-align: center;
 
-  +mobile() {
+  @include mobile() {
     text-align: center;
   }
 }
@@ -10,7 +10,7 @@
 .custom-logo-image {
   margin-top: 20px;
 
-  +tablet-mobile() {
+  @include tablet-mobile() {
     display: none;
   }
 }

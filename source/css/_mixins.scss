@@ -111,11 +111,11 @@
   margin: 0 auto;
   width: $content-desktop;
 
-  +desktop-large() {
+  @include desktop-large() {
     width: $content-desktop-large;
   }
 
-  +desktop-largest() {
+  @include desktop-largest() {
     width: $content-desktop-largest;
   }
 }
@@ -131,7 +131,7 @@
 @mixin sidebar-toggle-position($reverse) {
   $alignment : sidebar-toggle-alignment($reverse)[0];
   {$alignment}: $b2t-position-right;
-  +tablet-mobile() {
+  @include tablet-mobile() {
     {$alignment}: $b2t-position-right-mobile;
   }
 }
@@ -142,13 +142,13 @@
   opacity: $b2t-opacity;
   position: fixed;
   z-index: $zindex-3;
-  sidebar-toggle-position(false);
+  @include sidebar-toggle-position(false);
 
   &:hover {
     opacity: $b2t-opacity-hover;
   }
 
-  +tablet-mobile() {
+  @include tablet-mobile() {
     opacity: $b2t-opacity-hover;
   }
 }

@@ -27,7 +27,7 @@
       z-index: $zindex-0;
     }
 
-    +tablet-mobile() {
+    @include tablet-mobile() {
       @if hexo-config('local_search.enable') or hexo-config('algolia_search.enable') {
         display: none;
       }

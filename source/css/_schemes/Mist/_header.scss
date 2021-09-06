@@ -5,7 +5,7 @@
   display: flex;
   padding: 20px 0;
 
-  +mobile() {
+  @include mobile() {
     display: block;
     padding: 10px 0;
   }
@@ -17,7 +17,7 @@
   .brand {
     padding: 2px 1px;
 
-    +mobile() {
+    @include mobile() {
       display: block;
     }
   }
@@ -34,7 +34,7 @@
   margin: 0 auto;
   width: 75%;
 
-  +mobile() {
+  @include mobile() {
     display: none;
   }
 }

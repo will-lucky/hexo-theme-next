@@ -1,16 +1,16 @@
 .post-body {
   font-family: $font-family-posts;
-  word-wrap();
+  @include word-wrap();
 
-  +desktop-large() {
+  @include desktop-large() {
     font-size: $font-size-large;
   }
 
-  +desktop() {
+  @include desktop() {
     text-align: unquote(hexo-config('text_align.desktop'));
   }
 
-  +tablet-mobile() {
+  @include tablet-mobile() {
     text-align: unquote(hexo-config('text_align.mobile'));
   }
 
@@ -25,7 +25,7 @@
       opacity: 0;
 
       &::before {
-        font-family-icons('\f0c1');
+        @include font-family-icons('\f0c1');
       }
     }
 

@@ -8,7 +8,7 @@
   font-size: $font-size-largest;
   font-weight: normal;
   margin: initial;
-  word-wrap();
+  @include word-wrap();
 
   @if hexo-config('post_edit.enable') {
     .post-edit-link {
@@ -19,7 +19,7 @@
       margin-left: -1.2em;
       transition: color $transition-ease-in;
 
-      +mobile-small() {
+      @include mobile-small() {
         margin-left: initial;
       }
 
@@ -85,7 +85,7 @@
 // Flexbox layout makes it possible to reorder the child
 // elements of .post-meta through the `order` CSS property
 .post-meta {
-  flex-wrap();
+  @include flex-wrap();
 }
 
 // .post-meta-item exists in .post-meta and footer
@@ -103,7 +103,7 @@
     display: none;
   }
 
-  +tablet-mobile() {
+  @include tablet-mobile() {
     display: none;
   }
 }

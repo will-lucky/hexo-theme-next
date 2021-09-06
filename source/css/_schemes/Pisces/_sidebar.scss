@@ -6,7 +6,7 @@
   top: $sidebar-offset;
   width: $sidebar-desktop;
 
-  +tablet-mobile() {
+  @include tablet-mobile() {
     display: none;
   }
 
@@ -50,11 +50,11 @@
 }
 
 .links-of-author {
-  flex-wrap();
+  @include flex-wrap();
 }
 
 .links-of-author-item {
-  sidebar-inline-links-item();
+  @include sidebar-inline-links-item();
 
   @if not hexo-config('social_icons.icons_only') {
     width: 50%;
@@ -75,7 +75,7 @@
   @if hexo-config('links_settings.layout') == 'inline' {
     display: inline-block;
     max-width: 100%;
-    sidebar-inline-links-item();
+    @include sidebar-inline-links-item();
   }
 }
 

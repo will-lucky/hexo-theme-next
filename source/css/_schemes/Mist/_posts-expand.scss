@@ -5,7 +5,7 @@
     .post-header {
       text-align: left;
 
-      +mobile() {
+      @include mobile() {
         text-align: center;
       }
     }
@@ -17,7 +17,7 @@
     .post-meta {
       justify-content: flex-start;
 
-      +mobile() {
+      @include mobile() {
         justify-content: center;
       }
     }

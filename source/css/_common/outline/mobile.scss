@@ -1,12 +1,12 @@
 /*
 // < 767px
-+mobile() {
+@include mobile() {
 
 }
 */
 
 @if hexo-config('mobile_layout_economy') {
-  +mobile-small() {
+  @include mobile-small() {
     // For Pisces & Gemini schemes only wider width (remove main blocks in Gemini).
     .main-inner {
       padding: initial !important;
@@ -79,7 +79,7 @@
 }
 /*
 // < 413px
-+mobile-smallest() {
+@include mobile-smallest() {
 
 }
 */

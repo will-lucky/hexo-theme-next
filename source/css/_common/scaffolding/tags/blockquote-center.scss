@@ -18,14 +18,14 @@
     border-top: 1px solid $grey-light;
     text-align: left;
     top: -20px;
-    font-family-icons('\f10d');
+    @include font-family-icons('\f10d');
   }
 
   &::after {
     border-bottom: 1px solid $grey-light;
     bottom: -20px;
     text-align: right;
-    font-family-icons('\f10e');
+    @include font-family-icons('\f10e');
   }
 
   p, div {

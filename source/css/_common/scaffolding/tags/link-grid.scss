@@ -7,7 +7,7 @@
   margin-bottom: 20px;
   padding: 1rem;
 
-  +mobile() {
+  @include mobile() {
     grid-template-columns: 1fr;
   }
 

@@ -12,7 +12,7 @@
 .header-inner {
   padding-top: 100px;
 
-  +mobile() {
+  @include mobile() {
     padding-top: 50px;
   }
 }

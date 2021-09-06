@@ -4,7 +4,7 @@
   text-align: center;
 
   button {
-    button($sidebar-highlight);
+    @include button($sidebar-highlight);
     border: 2px solid $sidebar-highlight;
     border-radius: 2px;
     outline: 0;

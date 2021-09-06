@@ -46,7 +46,7 @@
         margin-top: -6px;
         position: absolute;
         top: 50%;
-        round-icon(12px);
+        @include round-icon(12px);
       }
     }
 
@@ -77,7 +77,7 @@
         display: inline-block;
         margin-right: 9px;
         width: 14px;
-        font-family-icons();
+        @include font-family-icons();
       }
 
       &.event-location::before {

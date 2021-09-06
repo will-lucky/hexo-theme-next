@@ -1,6 +1,6 @@
 @if hexo-config('sidebar.position') == 'right' {
   .sidebar-active {
-    +desktop() {
+    @include desktop() {
       padding-right: $sidebar-desktop;
     }
   }
@@ -14,7 +14,7 @@
   }
 } @else {
   .sidebar-active {
-    +desktop() {
+    @include desktop() {
       padding-left: $sidebar-desktop;
     }
   }

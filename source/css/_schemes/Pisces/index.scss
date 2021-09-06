@@ -9,7 +9,7 @@
   box-shadow: $box-shadow-inner;
   padding: $content-desktop-padding;
 
-  +tablet-mobile() {
+  @include tablet-mobile() {
     padding: 20px;
   }
 }
@@ -24,7 +24,7 @@
 }
 
 .pagination {
-  +mobile() {
+  @include mobile() {
     margin-bottom: 10px;
   }
 }

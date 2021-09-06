@@ -2,7 +2,7 @@
   background: var(--theme-color);
 
   .site-nav-on & {
-    +tablet-mobile() {
+    @include tablet-mobile() {
       box-shadow: 0 0 16px rgba(0, 0, 0, .5);
     }
   }
@@ -21,8 +21,8 @@
 }
 
 .site-nav-toggle, .site-nav-right {
-  +tablet() {
-    flex-column();
+  @include tablet() {
+    @include flex-column();
   }
 
   .toggle {

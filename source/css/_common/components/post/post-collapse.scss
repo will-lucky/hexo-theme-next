@@ -3,7 +3,7 @@
   margin-left: $posts-collapse-margin;
   position: relative;
 
-  +mobile() {
+  @include mobile() {
     margin-left: $posts-collapse-margin-mobile;
     margin-right: $posts-collapse-margin-mobile;
   }
@@ -19,7 +19,7 @@
       margin-top: -4px;
       position: absolute;
       top: 50%;
-      round-icon(10px);
+      @include round-icon(10px);
     }
   }
 
@@ -35,7 +35,7 @@
       margin-top: -4px;
       position: absolute;
       top: 50%;
-      round-icon(8px);
+      @include round-icon(8px);
     }
   }
 
@@ -64,7 +64,7 @@
       position: absolute;
       top: $font-size-smallest;
       transition: background $transition-ease;
-      round-icon(6px);
+      @include round-icon(6px);
     }
 
     &:hover {

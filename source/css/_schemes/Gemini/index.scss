@@ -35,11 +35,11 @@
       box-shadow: $box-shadow;
       margin-top: $sidebar-offset;
 
-      +tablet() {
+      @include tablet() {
         margin-top: $content-tablet-padding;
       }
 
-      +mobile() {
+      @include mobile() {
         margin-top: $content-mobile-padding;
       }
     }
@@ -78,7 +78,7 @@
 // ==================================================
 // > 768px & < 991px
 // ==================================================
-+tablet() {
+@include tablet() {
   // Posts in blocks.
   .main-inner {
     padding: $content-tablet-padding;
@@ -106,7 +106,7 @@
 // ==================================================
 // < 767px
 // ==================================================
-+mobile() {
+@include mobile() {
   // Posts in blocks.
   .main-inner {
     padding: $content-mobile-padding;

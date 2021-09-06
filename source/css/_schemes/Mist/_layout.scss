@@ -20,7 +20,7 @@ hr {
 .pagination {
   text-align: left;
 
-  +mobile() {
+  @include mobile() {
     margin: 80px 0 0;
     text-align: center;
   }
@@ -37,7 +37,7 @@ hr {
 .footer-inner {
   text-align: left;
 
-  +mobile() {
+  @include mobile() {
     text-align: center;
   }
 }

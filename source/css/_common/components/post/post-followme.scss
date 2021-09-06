@@ -3,15 +3,15 @@
     color: $grey;
     padding: 1em 1.5em;
     text-align: center;
-    post-card();
+    @include post-card();
 
     .social-list {
-      flex-wrap();
+      @include flex-wrap();
 
       .social-item {
         margin: .5em 2em;
 
-        +tablet-mobile() {
+        @include tablet-mobile() {
           margin: .5em .75em;
         }
       }

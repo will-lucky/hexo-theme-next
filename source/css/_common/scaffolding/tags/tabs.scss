@@ -17,7 +17,7 @@
     // Fix issue #398
     z-index: $zindex-0;
 
-    +mobile-smallest() {
+    @include mobile-smallest() {
       display: block;
       margin-bottom: 5px;
     }
@@ -31,14 +31,14 @@
       flex-grow: 1;
       list-style-type: none;
 
-      +mobile-smallest() {
+      @include mobile-smallest() {
         border-bottom: 1px solid transparent;
         border-left: 3px solid transparent;
         border-right: 1px solid transparent;
         border-top: 1px solid transparent;
       }
 
-      +mobile-smallest() {
+      @include mobile-smallest() {
         border-radius: $tbr;
       }
 
@@ -68,7 +68,7 @@
         border-right-color: $table-border-color;
         border-top-color: $orange;
 
-        +mobile-smallest() {
+        @include mobile-smallest() {
           border-bottom-color: $table-border-color;
           border-left-color: $orange;
           border-right-color: $table-border-color;
@@ -87,7 +87,7 @@
     border-radius: 0 0 $tbr $tbr;
     border-top-color: transparent;
 
-    +mobile-smallest() {
+    @include mobile-smallest() {
       border-radius: $tbr;
       border-top-color: $table-border-color;
     }

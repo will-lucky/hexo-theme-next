@@ -4,9 +4,9 @@
     position: fixed;
     top: -10px;
     transition: top .3s;
-    sidebar-toggle-position(true);
+    @include sidebar-toggle-position(true);
 
-    +tablet-mobile() {
+    @include tablet-mobile() {
       display: none;
     }
 
@@ -14,7 +14,7 @@
       color: convert(hexo-config('bookmark.color'));
       font-size: 32px;
       line-height: 1;
-      font-family-icons('\f02e');
+      @include font-family-icons('\f02e');
     }
   }
 

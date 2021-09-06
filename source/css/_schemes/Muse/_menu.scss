@@ -1,31 +1,31 @@
 .site-nav {
-  +mobile() {
+  @include mobile() {
     padding-top: 30px;
   }
 }
 
 .main-menu {
-  +mobile() {
+  @include mobile() {
     border-bottom: 1px solid $grey-lighter;
     border-top: 1px solid $grey-lighter;
   }
 }
 
 .menu {
-  +mobile() {
+  @include mobile() {
     text-align: left;
   }
 }
 
 .menu .menu-item {
-  +mobile() {
+  @include mobile() {
     margin: 0 10px;
   }
 
   a {
     border-bottom: 1px solid transparent;
 
-    +mobile() {
+    @include mobile() {
       padding: 5px 10px;
     }
 
@@ -33,14 +33,14 @@
       background: transparent;
       border-bottom: 1px solid var(--link-hover-color);
 
-      +mobile() {
+      @include mobile() {
         border-bottom: 1px dotted $grey-lighter;
       }
     }
   }
 
   .fa, .fab, .far, .fas {
-    +tablet-desktop() {
+    @include tablet-desktop() {
       display: block;
       line-height: 2;
       margin-right: 0;

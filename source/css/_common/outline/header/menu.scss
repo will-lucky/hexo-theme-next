@@ -11,7 +11,7 @@
   list-style: none;
   margin: 0 10px;
 
-  +mobile() {
+  @include mobile() {
     display: block;
     margin-top: 10px;
 
@@ -44,7 +44,7 @@
     text-align: center;
     white-space: nowrap;
 
-    +mobile() {
+    @include mobile() {
       float: right;
       margin-left: 0;
     }

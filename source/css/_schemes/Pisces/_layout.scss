@@ -4,7 +4,7 @@
   box-shadow: $box-shadow-inner;
   width: $sidebar-desktop;
 
-  +tablet-mobile() {
+  @include tablet-mobile() {
     border-radius: initial;
     width: auto;
   }
@@ -16,13 +16,13 @@
   align-items: stretch;
   display: flex;
   justify-content: space-between;
-  main-container();
+  @include main-container();
 
   @if hexo-config('sidebar.position') == 'right' {
     flex-direction: row-reverse;
   }
 
-  +tablet-mobile() {
+  @include tablet-mobile() {
     display: block;
     width: auto;
   }
@@ -33,7 +33,7 @@
   box-sizing: border-box;
   width: $content-wrap;
 
-  +tablet-mobile() {
+  @include tablet-mobile() {
     border-radius: initial;
     width: 100%;
   }
@@ -46,7 +46,7 @@
     padding-left: $sidebar-desktop + $sidebar-offset;
   }
 
-  +tablet-mobile() {
+  @include tablet-mobile() {
     padding-left: 0;
     padding-right: 0;
     width: auto;
