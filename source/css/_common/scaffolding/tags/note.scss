@@ -63,7 +63,7 @@
     }
 
     @each $type in $note-types {
-      &.{$type} {
+      &.#{$type} {
         @if $note-style == 'flat' {
           background: $note-bg[$type];
           @if hexo-config('darkmode') {

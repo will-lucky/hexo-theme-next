@@ -9,7 +9,7 @@
 
 @for $tag-cloud from 0 through 10 {
   $tag-cloud-color : mix($tag-cloud-end, $tag-cloud-start, $tag-cloud * 10);
-  .tag-cloud-{$tag-cloud} {
+  .tag-cloud-#{$tag-cloud} {
     border-bottom-color: $tag-cloud-color;
     color: $tag-cloud-color;
   }
@@ -19,7 +19,7 @@
   @media (prefers-color-scheme: dark) {
     @for $tag-cloud from 0 through 10 {
       $tag-cloud-color : mix($tag-cloud-end-dark, $tag-cloud-start-dark, $tag-cloud * 10);
-      .tag-cloud-{$tag-cloud} {
+      .tag-cloud-#{$tag-cloud} {
         border-bottom-color: $tag-cloud-color;
         color: $tag-cloud-color;
       }
