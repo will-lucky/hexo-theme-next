@@ -2,7 +2,7 @@
   color: $grey-dark;
   // Init Sidebar & TOC inner dimensions on all pages and for all schemes.
   $offset : if(($scheme == 'Pisces') or ($scheme == 'Gemini'), $sidebar-offset, $sidebar-padding);
-  max-height: 'calc(100vh - %s)' % unit($offset * 2, 'px');
+  max-height: calc(100vh - #{$offset * 2});
   padding: $sidebar-padding 10px;
   text-align: center;
   flex-column();

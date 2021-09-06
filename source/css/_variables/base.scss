@@ -72,9 +72,9 @@ $theme-color-dark             = convert(hexo-config('theme_color.dark'));
 // Typography
 // Font, line-height, and elements colors.
 // --------------------------------------------------
-get_font_family(config) {
-  $custom-family : hexo-config('font.' + config + '.family');
-  return if($custom-family is a 'string', unquote($custom-family), null);
+@function get_font_family($config) {
+  $custom-family : hexo-config('font.' + $config + '.family');
+  @return if(type-of($custom-family) == string, unquote($custom-family), null);
 }
 
 // Font families.
@@ -97,7 +97,7 @@ $font-family-monospace    : get_font_family('codes'), consolas, Menlo, monospace
 
 
 // Font size
-$font-size-base           : if((hexo-config('font.enable') and hexo-config('font.global.size') is a 'unit'), unit(hexo-config('font.global.size'), em), 1em);
+$font-size-base           : if((hexo-config('font.enable') and type-of(hexo-config('font.global.size')) == number), hexo-config('font.global.size') * 1em, 1em);
 $font-size-smallest       : .75em;
 $font-size-smaller        : .8125em;
 $font-size-small          : .875em;
@@ -109,7 +109,7 @@ $font-size-largest        : 1.5em;
 
 // Headings font size
 $font-size-headings-step  : .125em;
-$font-size-headings-base  : if((hexo-config('font.enable') and hexo-config('font.headings.size') is a 'unit'), unit(hexo-config('font.headings.size'), em), 1.625em);
+$font-size-headings-base  : if((hexo-config('font.enable') and type-of(hexo-config('font.headings.size')) == number), hexo-config('font.headings.size') * 1em, 1.625em);
 
 
 // Global line height
@@ -216,7 +216,7 @@ $brand-hover-color              : white;
 $brand-color-dark               : $grey-lighter;
 $brand-hover-color-dark         : $grey-lighter;
 
-$font-size-title                : if((hexo-config('font.enable') and hexo-config('font.title.size') is a 'unit'), unit(hexo-config('font.title.size'), em), 1.375em);
+$font-size-title                : if((hexo-config('font.enable') and type-of(hexo-config('font.title.size')) == number), hexo-config('font.title.size') * 1em, 1.375em);
 $font-size-subtitle             : $font-size-smaller;
 $subtitle-color                 : $grey-dark;
 $site-subtitle-color            : $grey-dark;
@@ -240,8 +240,8 @@ $tag-cloud-end-dark   : #eee;
 // Variables for sidebar section elements.
 // --------------------------------------------------
 
-$sidebar-padding                      : if(hexo-config('sidebar.padding') is a 'unit', unit(hexo-config('sidebar.padding'), px), 18px);
-$sidebar-offset                       : if(hexo-config('sidebar.offset') is a 'unit', unit(hexo-config('sidebar.offset'), px), 12px);
+$sidebar-padding                      : if(type-of(hexo-config('sidebar.padding')) == number, hexo-config('sidebar.padding') * 1px, 18px);
+$sidebar-offset                       : if(type-of(hexo-config('sidebar.offset')) == number, hexo-config('sidebar.offset') * 1px, 12px);
 $sidebar-nav-color                    : $grey-dim;
 $sidebar-nav-hover-color              : $whitesmoke;
 $sidebar-highlight                    : $blue-bright;
@@ -287,7 +287,7 @@ $post-card-margin             : 1em 0 0;
 // Note colors
 // --------------------------------------------------
 // Read note light_bg_offset from NexT config and set in '$lbg%' to use it as string variable.
-$lbg : if(hexo-config('note.light_bg_offset') is a 'unit', unit(hexo-config('note.light_bg_offset'), '%'), 0);
+$lbg : if(type-of(hexo-config('note.light_bg_offset')) == number, hexo-config('note.light_bg_offset') * 1%, 0);
 $note-types : 'default' 'primary' 'info' 'success' 'warning' 'danger';
 
 $note-border-radius : 3px;

@@ -1,8 +1,8 @@
 // Variables of Muse scheme
 // ==================================================
 
-$sidebar-width           : if(hexo-config('sidebar.width') is a 'unit', hexo-config('sidebar.width'), 320);
-$sidebar-desktop         : unit($sidebar-width, 'px');
+$sidebar-width           : if(type-of(hexo-config('sidebar.width')) == number, hexo-config('sidebar.width'), 320);
+$sidebar-desktop         : $sidebar-width * 1px;
 
 $content-padding-bottom     : 60px;
 $posts-first-padding        : 70px;
