@@ -74,7 +74,7 @@ $theme-color-dark             = convert(hexo-config('theme_color.dark'));
 // Typography
 // Font, line-height, and elements colors.
 // --------------------------------------------------
-@function get_font_family($config) {
+@function get-font-family($config) {
   $custom-family : hexo-config('font.' + $config + '.family');
   @return if(type-of($custom-family) == string, unquote($custom-family), null);
 }
@@ -83,28 +83,28 @@ $theme-color-dark             = convert(hexo-config('theme_color.dark'));
 $font-family-chinese      : 'PingFang SC', 'Microsoft YaHei';
 
 $font-family-base         : $font-family-chinese, sans-serif;
-@if get_font_family('global') {
-  $font-family-base       : join(get_font_family('global'), $font-family-base);
+@if get-font-family('global') {
+  $font-family-base       : join(get-font-family('global'), $font-family-base);
 }
 
 $font-family-logo         : $font-family-base;
-@if get_font_family('title') {
-  $font-family-logo       : join(get_font_family('title'), $font-family-logo);
+@if get-font-family('title') {
+  $font-family-logo       : join(get-font-family('title'), $font-family-logo);
 }
 
 $font-family-headings     : $font-family-base;
-@if get_font_family('headings') {
-  $font-family-headings   : join(get_font_family('headings'), $font-family-headings);
+@if get-font-family('headings') {
+  $font-family-headings   : join(get-font-family('headings'), $font-family-headings);
 }
 
 $font-family-posts        : $font-family-base;
-@if get_font_family('posts') {
-  $font-family-posts      : join(get_font_family('posts'), $font-family-posts);
+@if get-font-family('posts') {
+  $font-family-posts      : join(get-font-family('posts'), $font-family-posts);
 }
 
 $font-family-monospace    : consolas, Menlo, monospace, $font-family-chinese;
-@if get_font_family('codes') {
-  $font-family-monospace  : join(get_font_family('codes'), $font-family-monospace);
+@if get-font-family('codes') {
+  $font-family-monospace  : join(get-font-family('codes'), $font-family-monospace);
 }
 
 
