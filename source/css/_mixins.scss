@@ -125,10 +125,10 @@
 }
 
 @mixin sidebar-toggle-position($reverse) {
-  $alignment : sidebar-toggle-alignment($reverse)[0];
-  {$alignment}: $b2t-position-right;
+  $alignment : list.nth(sidebar-toggle-alignment($reverse), 0);
+  #{$alignment}: $b2t-position-right;
   @include tablet-mobile() {
-    {$alignment}: $b2t-position-right-mobile;
+    #{$alignment}: $b2t-position-right-mobile;
   }
 }
 
