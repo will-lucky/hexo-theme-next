@@ -608,9 +608,9 @@ disqusjs:
 # Changyan
 # For more information: https://changyan.kuaizhan.com
 changyan:
-  enable: false
-  appid:
-  appkey:
+  enable: true
+  appid: cyw5H1d0Y
+  appkey: 6a72992afcbf6f279808d39296872d41
 
 # LiveRe comments system
 # You can get your uid from https://livere.com/insight/myCode (General web site)
@@ -619,7 +619,7 @@ livere_uid: # <your_uid>
 # Gitalk
 # For more information: https://gitalk.github.io
 gitalk:
-  enable: true
+  enable: false
   github_id: will-lucky # GitHub repo owner
   repo: hexo-gittalk # Repository name to store issues
   client_id: db842afd96392017f739 # GitHub Application Client ID
