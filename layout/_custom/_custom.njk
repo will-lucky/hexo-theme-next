@@ -1,0 +1,16 @@
+{% if theme.cursor_effect %}
+  {% if theme.cursor_effect.click == "fireworks" %}
+    <script src="/js/my_js/fireworks.js"></script>
+  {% elseif theme.cursor_effect.click == "explosion" %}
+    <canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;" ></canvas>
+    <script src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script>
+    <script src="/js/my_js/explosion.js"></script>
+  {% elseif theme.cursor_effect.click == "love" %}
+    <script src="/js/my_js/love.js"></script>
+  {% elseif theme.cursor_effect.click == "text" %}
+    <script src="/js/my_js/text.js"></script>
+  {% endif %}
+  {% if theme.cursor_effect.move == "sakura" %}
+      <script src="/js/my_js/sakura.js"></script>
+  {% endif %}
+{% endif %}
